@@ -1,94 +1,152 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Maaz Hasnain Khan</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maaz Hasnain Khan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-header {
+            @apply text-3xl font-bold mb-6;
+        }
+        .card {
+            @apply bg-gray-800 p-6 rounded-lg shadow-lg;
+        }
+        .link-hover {
+            @apply hover:text-blue-400 transition-colors;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold">Maaz Hasnain Khan</h1>
+                <p class="text-gray-400">Software Developer | Biomedical Engineer</p>
+            </div>
+            <nav class="flex space-x-4">
+                <a href="#about" class="link-hover">About</a>
+                <a href="#experience" class="link-hover">Experience</a>
+                <a href="#projects" class="link-hover">Projects</a>
+                <a href="#contact" class="link-hover">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><img src="images/maaz.png" alt="" style="width:100%; margin: auto;" /></li>
-							<li><a href="#intro"><font face  = "Calibri" size = 2 >Welcome</font></a></li>
-							<li><a href="#one"><font face  = "Calibri" size = 2 >About Me</font></a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <!-- About Section -->
+        <section id="about" class="mb-16">
+            <h2 class="section-header">About Me</h2>
+            <div class="card">
+                <p class="text-gray-300">
+                    Versatile software developer with a strong technical expertise and a background in biomedical engineering. Skilled in full-stack development, data analysis, and system design. Passionate about building innovative solutions and contributing to dynamic teams.
+                </p>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold">Skills</h3>
+                    <ul class="list-disc list-inside text-gray-300 mt-2">
+                        <li><strong>Languages:</strong> Python, Java, JavaScript, TypeScript, C/C++, SQL, HTML, CSS</li>
+                        <li><strong>Frameworks/Libraries:</strong> React, Next.js, REST APIs, Apache Spark, PostgreSQL, Prisma, Vega-Lite, D3.js, Matplotlib, Seaborn, Pandas, Numpy, scikit-learn, Node.js, Tailwind CSS, Git</li>
+                        <li><strong>Database/OS:</strong> MySQL, MongoDB, Windows, Linux</li>
+                        <li><strong>Tools/Platforms:</strong> Visual Studio Code, Postman, IntelliJ IDEA, MySQL Workbench, Figma, Google Colab, Tableau, Anaconda</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <!-- Experience Section -->
+        <section id="experience" class="mb-16">
+            <h2 class="section-header">Experience</h2>
+            <div class="space-y-6">
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Teaching Assistant, Old Dominion University</h3>
+                    <p class="text-gray-400">Norfolk, VA | Aug 2023 – Present</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-2">
+                        <li>Facilitate student learning in introductory computer science and software development courses.</li>
+                        <li>Assist in grading assignments, preparing instructional materials, and mentoring students.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Software Engineer I, Generic Solutions & Consultancy</h3>
+                    <p class="text-gray-400">Karachi, Pakistan | Apr 2022 – Jul 2023</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-2">
+                        <li>Contributed to the development and maintenance of ERP systems.</li>
+                        <li>Developed GERP Mobile App, enhancing enterprise management accessibility.</li>
+                        <li>Collaborated with cross-functional teams to optimize ERP solutions.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Front End Engineer Intern, Generic Solutions & Consultancy</h3>
+                    <p class="text-gray-400">Karachi, Pakistan | Aug 2021 – Mar 2022</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-2">
+                        <li>Worked on the "Integrated Modular Operation Room" project for surgical automation.</li>
+                        <li>Developed a web application to control surgical environment parameters.</li>
+                        <li>Collaborated with engineers and healthcare professionals for integration.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Intern Biomedical Engineer, Darul Sehat Hospital</h3>
+                    <p class="text-gray-400">Karachi, Pakistan | Oct 2020 – Nov 2020</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-2">
+                        <li>Gained experience in maintenance and functionality of medical equipment.</li>
+                        <li>Supported equipment testing, maintenance, and calibration.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Maaz Hasnain Khan</h1>
-							<h2>Biomedical Engineer</h2>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly"><font face  = "Calibri" size = 5 >Learn More</font></a></li>
-							</ul>
-						</div>
-					</section>
+        <!-- Projects Section -->
+        <section id="projects" class="mb-16">
+            <h2 class="section-header">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Digital Library Search Engine with a Chatbot</h3>
+                    <p class="text-gray-300 mt-2">Developed a web-based digital library search engine with an integrated chatbot for ETDs using React and Node.js.</p>
+                    <p class="text-gray-400 mt-2"><strong>Skills:</strong> React, JavaScript, TypeScript, NextJS</p>
+                    <a href="https://github.com/maazhasnainkhan/CS518-class-project/tree/main" class="link-hover mt-2 inline-block">View Project</a>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Global Influenza Dynamics</h3>
+                    <p class="text-gray-300 mt-2">Conducted data analysis using FluNet, creating an interactive dashboard to visualize influenza trends.</p>
+                    <p class="text-gray-400 mt-2"><strong>Skills:</strong> Python, Pandas, Numpy, SciPy, Matplotlib, Seaborn</p>
+                    <a href="https://colab.research.google.com/drive/1Z8MtWRriRkCyf5lToZ0KboVKNpgQAFyE" class="link-hover mt-2 inline-block">View Project</a>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Next.js Global Hackathon: Exauge</h3>
+                    <p class="text-gray-300 mt-2">Developed Exauge, an AI-powered quiz widget for content engagement, showcased in a NextJS hackathon.</p>
+                    <p class="text-gray-400 mt-2"><strong>Skills:</strong> NextJS, React, TypeScript, Prisma, PostgreSQL, OpenAI</p>
+                    <a href="https://github.com/gentez/exauge-admin-client" class="link-hover mt-2 inline-block">View Project</a>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Integrated Modular Operation Room</h3>
+                    <p class="text-gray-300 mt-2">Engineered a smart operation room control system with a web interface and ESP32 integration.</p>
+                    <p class="text-gray-400 mt-2"><strong>Skills:</strong> C, JavaScript, Arduino, NodeMCU ESP32</p>
+                </div>
+            </div>
+        </section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<img src="images/biomed1.png" alt=""/>
-							<div class="content">
-								<div class="inner">
-									<h2>Introduction</h2>
-									<p>As a forward-thinking Biomedical Engineer with a passion for innovation, I have dedicated my career to the convergence of healthcare and technology. With a proven track record in optimizing radiology and critical care equipment, I have harnessed my expertise to pursue a master's degree in Computer Science, where I eagerly explore the limitless possibilities of artificial intelligence and data-driven healthcare solutions. My unique blend of medical engineering and computer science empowers me to bridge the gap between cutting-edge technology and the vital needs of the healthcare industry.</p>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-header">Contact</h2>
+            <div class="card">
+                <p class="text-gray-300">Let's connect! Reach out to discuss opportunities or collaborations.</p>
+                <ul class="list-none text-gray-300 mt-4 space-y-2">
+                    <li><strong>Email:</strong> <a href="mailto:maaz.hk98@gmail.com" class="link-hover">maaz.hk98@gmail.com</a></li>
+                    <li><strong>Phone:</strong> +1 (757) 553-9171</li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/maaz-hasnain-khan/" class="link-hover">linkedin.com/in/maaz-hasnain-khan</a></li>
+                    <li><strong>Location:</strong> Norfolk, VA</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-								</div>
-							</div>
-						</section>
-						<section>
-							<img src="images/biomed2.png" alt=""/>
-							<div class="content">
-								<div class="inner">
-									<h2>Learn More About Maaz Hasnain Khan</h2>
-									<p>Click on the button below to see a detailed résumé.</p>
-									<ul class="actions">
-										<li><a href="assets/Maaz Hasnain Khan CV.pdf" class="button scrolly"><font face  = "Calibri" size = 5 >Résumé</font></a></li>
-									</ul>
-
-								</div>
-							</div>
-						</section>
-						
-					</section>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<section class="split contact">
-				<section>
-					<h4><font face  = "Time New Roman" size = 4 >Email</font></h4>
-					<p><a href="#">mkhan016@odu.edu</a></p>
-				</section>
-				<section>
-					<h4><font face  = "Time New Roman" size = 4 >Social</font></h4>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/maaz-hasnain-khan" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/maazhasnainkhan" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					</ul>
-				</section>
-			</section>
-		</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 text-center">
+        <p class="text-gray-400">&copy; 2025 Maaz Hasnain Khan. All rights reserved.</p>
+    </footer>
+</body>
 </html>
