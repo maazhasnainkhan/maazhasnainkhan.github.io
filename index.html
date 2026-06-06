@@ -3,40 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website for Maaz Hasnain Khan, Lecturer in Data Science, software developer, and biomedical engineer based in Norfolk, Virginia.">
     <title>Maaz Hasnain Khan - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
         .section-header {
-            @apply text-3xl font-bold mb-6;
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
         }
         .card {
-            @apply bg-gray-800 p-6 rounded-lg shadow-lg;
+            background-color: rgb(31 41 55);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.25), 0 4px 6px -4px rgb(0 0 0 / 0.25);
         }
         .link-hover {
-            @apply hover:text-blue-400 transition-colors;
+            transition: color 150ms ease-in-out;
+        }
+        .link-hover:hover {
+            color: rgb(96 165 250);
         }
         .bullet-continuation {
             padding-left: 1.5em;
         }
         .bullet-continuation li {
             text-indent: -1.5em;
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            background-color: rgb(55 65 81);
+            color: rgb(209 213 219);
+            padding: 0.35rem 0.7rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin: 0.25rem 0.25rem 0 0;
+        }
+        .timeline-date {
+            color: rgb(156 163 175);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+        .sub-card {
+            background-color: rgb(17 24 39 / 0.65);
+            border: 1px solid rgb(55 65 81);
+            padding: 1rem;
+            border-radius: 0.75rem;
+        }
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
     <!-- Header -->
-    <header class="bg-gray-800 py-6 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <header class="bg-gray-800 py-6 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto flex flex-col gap-4 lg:flex-row lg:justify-between lg:items-center">
             <div>
                 <h1 class="text-3xl font-bold">Maaz Hasnain Khan</h1>
-                <p class="text-gray-400">Software Developer | Biomedical Engineer</p>
+                <p class="text-gray-400 mt-1">Lecturer in Data Science | Software Developer | Biomedical Engineer</p>
+                <p class="text-gray-400 mt-2 text-sm">
+                    Norfolk, VA / <a href="mailto:maaz.hk98@gmail.com" class="link-hover">maaz.hk98@gmail.com</a> / +1 (757) 553-9171 / 
+                    <a href="https://www.linkedin.com/in/maaz-hasnain-khan/" class="link-hover" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </p>
             </div>
-            <nav class="flex space-x-4">
+            <nav class="flex flex-wrap gap-x-4 gap-y-2 text-sm sm:text-base">
                 <a href="#about" class="link-hover">About</a>
+                <a href="#skills" class="link-hover">Skills</a>
                 <a href="#experience" class="link-hover">Experience</a>
+                <a href="#teaching" class="link-hover">Teaching</a>
                 <a href="#education" class="link-hover">Education</a>
                 <a href="#projects" class="link-hover">Projects</a>
                 <a href="#contact" class="link-hover">Contact</a>
@@ -47,133 +87,276 @@
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <!-- About Section -->
-        <section id="about" class="mb-16">
-            <h2 class="section-header text-xl font-semibold">About Me</h2>
+        <section id="about" class="mb-16 scroll-mt-28">
+            <h2 class="section-header">About Me</h2>
             <div class="card">
-                <p class="text-gray-300">
-                    Versatile software developer with a strong technical expertise and a background in biomedical engineering. Skilled in full-stack development, data analysis, and system design. Passionate about building innovative solutions and contributing to dynamic teams.
+                <p class="text-gray-300 leading-relaxed">
+                    I am a Lecturer in the School of Data Science at Old Dominion University with experience in data science education, full-stack software development, research support, and biomedical engineering. My work combines applied instruction, Canvas LMS course design, programming, data visualization, machine learning, and human-centered technical problem solving.
                 </p>
-                <div class="mt-4">
-                    <h3 class="text-xl font-semibold">Skills</h3>
-                    <ul class="list-disc list-inside text-gray-300 mt-2">
-                        <li><strong>Languages:</strong> Python, Java, JavaScript, TypeScript, C/C++, SQL, HTML, CSS</li>
-                        <li><strong>Frameworks/Libraries:</strong> React, Next.js, REST APIs, Apache Spark, PostgreSQL, Prisma, Vega-Lite, D3.js, Matplotlib, Seaborn, Pandas, Numpy, scikit-learn, Tensorflow, PyTorch, Node.js, Tailwind CSS, Git</li>
-                        <li><strong>Database/OS:</strong> MySQL, MongoDB, Windows, Linux</li>
-                        <li><strong>Tools/Platforms:</strong> Visual Studio Code, Postman, IntelliJ IDEA, MySQL Workbench, Figma, Google Colab, Tableau, Anaconda</li>
-                    </ul>
+                <p class="text-gray-300 leading-relaxed mt-4">
+                    I teach and develop undergraduate data science courses with a focus on applied learning, accessibility, interdisciplinary connections, and preparing students for data-driven careers.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-16 scroll-mt-28">
+            <h2 class="section-header">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3">Languages</h3>
+                    <p>
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">C/C++</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3">Frameworks & Libraries</h3>
+                    <p>
+                        <span class="tag">React</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Apache Spark</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Prisma</span>
+                        <span class="tag">Vega-Lite</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">Matplotlib</span>
+                        <span class="tag">Seaborn</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Git</span>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3">Databases & Operating Systems</h3>
+                    <p>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Windows</span>
+                        <span class="tag">Linux</span>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3">Tools & Platforms</h3>
+                    <p>
+                        <span class="tag">Visual Studio Code</span>
+                        <span class="tag">Postman</span>
+                        <span class="tag">IntelliJ IDEA</span>
+                        <span class="tag">MySQL Workbench</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Google Colab</span>
+                        <span class="tag">Tableau</span>
+                        <span class="tag">Anaconda</span>
+                        <span class="tag">Canvas LMS</span>
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="mb-16">
-            <h2 class="section-header text-xl font-semibold">Experience</h2>
+        <section id="experience" class="mb-16 scroll-mt-28">
+            <h2 class="section-header">Experience</h2>
             <div class="space-y-6">
                 <div class="card">
-                    <h3 class="text-l font-semibold">Research Assistant, Old Dominion University</h3>
-                    <p class="text-gray-400">Norfolk, VA | Jun 2025 – Present</p>
-                    <ul class="list-disc list-inside text-gray-300 mt-2 bullet-continuation">
-                        <li>Working on an AI-driven research project focused on enhancing the metadata quality of electronic theses and dissertations (ETDs).</li>
-                        <li>Investigating and implementing machine learning and natural language processing (NLP) techniques to automatically identify and correct metadata inconsistencies.</li>
-                        <li>Assisting in dataset preparation, model development, and evaluation to improve the discoverability and integrity of scholarly digital archives.</li>
+                    <h3 class="text-xl font-semibold">Lecturer, School of Data Science, Old Dominion University</h3>
+                    <p class="timeline-date">Norfolk, VA | Aug 2025 – Present</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 bullet-continuation">
+                        <li>Delivering undergraduate instruction in Data Science, emphasizing applied learning and interdisciplinary connections.</li>
+                        <li>Developing and implementing innovative courses to prepare students for data-driven careers.</li>
+                        <li>Designing and maintaining Canvas LMS, ensuring effective delivery of asynchronous and hybrid content.</li>
+                        <li>Collaborating with faculty to align course content with program outcomes and accreditation standards.</li>
                     </ul>
                 </div>
+
                 <div class="card">
-                    <h3 class="text-l font-semibold">Teaching Assistant, Old Dominion University</h3>
-                    <p class="text-gray-400">Norfolk, VA | Aug 2023 – May 2025</p>
-                    <ul class="list-disc list-inside text-gray-300 mt-2 bullet-continuation">
-                        <li>Conducted labs, recitations, and office hours for introductory courses in Python and Java, providing hands-on guidance on programming fundamentals,
-                            object-oriented design, and debugging practices.</li>
+                    <h3 class="text-xl font-semibold">Research Assistant, Old Dominion University</h3>
+                    <p class="timeline-date">Norfolk, VA | Jun 2025 – Aug 2025</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 bullet-continuation">
+                        <li>Worked on an AI-driven research project focused on enhancing the metadata quality of electronic theses and dissertations (ETDs).</li>
+                        <li>Investigated and implemented machine learning and natural language processing (NLP) techniques to automatically identify and correct metadata inconsistencies.</li>
+                        <li>Assisted in dataset preparation, model development, and evaluation to improve the discoverability and integrity of scholarly digital archives.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Teaching Assistant, Old Dominion University</h3>
+                    <p class="timeline-date">Norfolk, VA | Aug 2023 – May 2025</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 bullet-continuation">
+                        <li>Facilitated student learning in undergraduate programming and research courses by conducting recitations, labs, and office hours.</li>
                         <li>Graded assignments and projects while preparing instructional materials aligned with course objectives.</li>
                         <li>Mentored students to strengthen their programming foundation.</li>
                     </ul>
                 </div>
+
                 <div class="card">
-                    <h3 class="text-l font-semibold">Software Engineer I, Generic Solutions & Consultancy</h3>
-                    <p class="text-gray-400">Karachi, Pakistan | Apr 2022 – Jul 2023</p>
-                    <ul class="list-disc list-inside text-gray-300 mt-2 bullet-continuation">
-                        <li>Designed and implemented scalable front-end features using React and TypeScript for enterprise-grade ERP systems.</li>
+                    <h3 class="text-xl font-semibold">Private Tutor, Self-Employed</h3>
+                    <p class="timeline-date">Karachi, Pakistan | May 2017 – Jul 2023</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 bullet-continuation">
+                        <li>Provided one-on-one tutoring in Math, Physics, Chemistry, Biology, and Computer Science to high school and early undergraduate students.</li>
+                        <li>Created custom lesson plans to cater to individual learning needs and academic goals.</li>
+                        <li>Supported students in test preparation, assignment guidance, and concept reinforcement, resulting in measurable academic improvement.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Software Engineer I, Generic Solutions & Consultancy</h3>
+                    <p class="timeline-date">Karachi, Pakistan | Apr 2022 – Jul 2023</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 bullet-continuation">
+                        <li>Designed scalable front-end features using React and TypeScript for enterprise-grade ERP systems.</li>
                         <li>Developed back-end services using Node.js, contributing to APIs and data workflows that improved operational efficiency across client platforms.</li>
-                        <li>Played a key role in the development of GERP Mobile App, enhancing accessibility and real-time enterprise management for users.</li>
+                        <li>Played a key role in the development of GERP Mobile App, focusing on enhancing accessibility and real-time enterprise management for users.</li>
                         <li>Collaborated in cross-functional teams to deploy, optimize, and maintain ERP solutions tailored to diverse industry needs.</li>
                     </ul>
                 </div>
+
                 <div class="card">
-                    <h3 class="text-l font-semibold">Front End Engineer Intern, Generic Solutions & Consultancy</h3>
-                    <p class="text-gray-400">Karachi, Pakistan | Aug 2021 – Mar 2022</p>
-                    <ul class="list-disc list-inside text-gray-300 mt-2 bullet-continuation">
-                        <li>Worked on the "Integrated Modular Operation Room" project, aimed at integrating and automating operation room functionalities.</li>
-                        <li>Developed a React-based web application featuring real-time control panels and monitoring dashboards to interface with surgical environment systems.</li>
-                        <li>Collaborated with backend developers and biomedical engineers to integrate medical devices and ensure seamless communication between hardware and software layers.</li>
+                    <h3 class="text-xl font-semibold">Front End Engineer Intern, Generic Solutions & Consultancy</h3>
+                    <p class="timeline-date">Karachi, Pakistan | Aug 2021 – Mar 2022</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 bullet-continuation">
+                        <li>Worked on the Integrated Modular Operation Room project, an innovative company-sponsored initiative aimed at integrating and automating operation room functionalities.</li>
+                        <li>Developed a React-based web application featuring real-time control panels and monitoring dashboards to interface with surgical environment systems from a centralized platform.</li>
+                        <li>Worked closely with backend developers and biomedical engineers to integrate medical devices and ensure seamless communication between hardware and software layers.</li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="mb-16 scroll-mt-28">
+            <h2 class="section-header">Teaching Experience</h2>
+            <div class="space-y-6">
                 <div class="card">
-                    <h3 class="text-l font-semibold">Intern Biomedical Engineer, Darul Sehat Hospital</h3>
-                    <p class="text-gray-400">Karachi, Pakistan | Oct 2020 – Nov 2020</p>
-                    <ul class="list-disc list-inside text-gray-300 mt-2 bullet-continuation">
-                        <li>Gained practical experience in hospital biomedical engineering, focusing on the maintenance and functionality of medical equipment.</li>
-                        <li>Supported equipment testing, maintenance, and calibration under the supervision of senior engineers.</li>
+                    <h3 class="text-xl font-semibold">Lecturer, School of Data Science, Old Dominion University</h3>
+                    <p class="timeline-date">Norfolk, VA | Aug 2025 – Present</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 bullet-continuation">
+                        <li>Instructor for DASC 300, DASC 324, DASC 424, and DASC 434, delivering undergraduate instruction in Foundations of Data Science, Data Visualization, Data Storytelling, and Principles of Data Science with Generative AI.</li>
+                        <li>Developed three 8-week accelerated Data Science courses:</li>
+                    </ul>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div class="sub-card">
+                            <h4 class="font-semibold">DASC 324</h4>
+                            <p class="text-gray-300 text-sm mt-1">Introduction to Data Visualization</p>
+                        </div>
+                        <div class="sub-card">
+                            <h4 class="font-semibold">DASC 424</h4>
+                            <p class="text-gray-300 text-sm mt-1">Data Storytelling</p>
+                        </div>
+                        <div class="sub-card">
+                            <h4 class="font-semibold">DASC 434</h4>
+                            <p class="text-gray-300 text-sm mt-1">Principles of Data Science with Generative AI</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-300 mt-4 bullet-continuation">
+                        <li>Create, administer, and grade assignments, quizzes, learning checks, discussion posts, and exams.</li>
+                        <li>Hold hybrid in-person and Zoom office hours to address individual student concerns, offering personalized guidance and support.</li>
+                        <li>Administer asynchronous and hybrid lectures through Canvas LMS, ensuring accessibility, organization, and student engagement.</li>
+                        <li>Designed complete course materials, including lectures, labs, assignments, quizzes, exams, rubrics, discussion prompts, and Canvas LMS modules.</li>
+                        <li>Align course content, assessments, and learning activities with applied data science competencies and program outcomes.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-xl font-semibold">Graduate Teaching Assistant, Old Dominion University</h3>
+                    <p class="timeline-date">Norfolk, VA | Aug 2023 – May 2025</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div class="sub-card">
+                            <h4 class="font-semibold">CS121</h4>
+                            <p class="text-gray-300 text-sm mt-1">Introduction to Information Literacy and Research</p>
+                        </div>
+                        <div class="sub-card">
+                            <h4 class="font-semibold">CS153</h4>
+                            <p class="text-gray-300 text-sm mt-1">Introduction to Programming With Python</p>
+                        </div>
+                        <div class="sub-card">
+                            <h4 class="font-semibold">CS115</h4>
+                            <p class="text-gray-300 text-sm mt-1">Introduction to Computer Science With Python</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-300 mt-4 bullet-continuation">
+                        <li>Conducted in-person recitation and lab sessions, fostering hands-on learning and collaborative problem-solving.</li>
+                        <li>Conducted online Zoom sessions for recitations and labs, employing interactive techniques to engage remote learners.</li>
+                        <li>Designed and recorded comprehensive solution and tutorial videos to enhance student understanding.</li>
+                        <li>Developed and administered quizzes to reinforce course content and assess learning outcomes.</li>
+                        <li>Held office hours to address individual student concerns, offering personalized guidance and support.</li>
+                        <li>Used Canvas LMS for managing course materials, assignments, and communication with students.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="mb-16">
-            <h2 class="section-header text-xl font-semibold">Education</h2>
+        <section id="education" class="mb-16 scroll-mt-28">
+            <h2 class="section-header">Education</h2>
             <div class="space-y-6">
                 <div class="card">
-                    <h3 class="text-l font-semibold">Old Dominion University</h3>
-                    <p class="text-gray-400">Master’s in Computer Science | Norfolk, VA | Aug 2023 – May 2025</p>
+                    <h3 class="text-xl font-semibold">Old Dominion University</h3>
+                    <p class="text-gray-300 mt-1">Master’s in Computer Science</p>
+                    <p class="timeline-date">Aug 2023 – May 2025</p>
                 </div>
                 <div class="card">
-                    <h3 class="text-l font-semibold">Sir Syed University of Engineering and Technology (SSUET)</h3>
-                    <p class="text-gray-400">Bachelor’s in Biomedical Engineering | Karachi, Pakistan | Jan 2018 – Mar 2022</p>
+                    <h3 class="text-xl font-semibold">Sir Syed University of Engineering and Technology (SSUET)</h3>
+                    <p class="text-gray-300 mt-1">Bachelor’s in Biomedical Engineering</p>
+                    <p class="timeline-date">Jan 2018 – Mar 2022</p>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="mb-16">
-            <h2 class="section-header text-xl font-semibold">Projects</h2>
+        <section id="projects" class="mb-16 scroll-mt-28">
+            <h2 class="section-header">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="card">
-                    <h3 class="text-l font-semibold">Next.js Global Hackathon: Exauge</h3>
-                    <p class="text-gray-300 mt-2">Developed Exauge, an AI-powered tool using TypeScript for content-driven websites, enabling automatic quiz generation to boost user engagement and provide audience insights. Implemented seamless integration with NextJS, leveraging TypeScript, Prisma Client, and PostgreSQL for efficient data management and quiz widget deployment.</p>
-                    <p class="text-gray-400 mt-2"><strong>Skills:</strong> Next.js, React, TypeScript, Prisma, PostgreSQL, OpenAI</p>
-                    <a href="https://exauge.com/" class="inline-block mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Exauge Project">View Project</a>
+                    <h3 class="text-xl font-semibold">Next.js Global Hackathon: Exauge</h3>
+                    <p class="text-gray-300 mt-2 leading-relaxed">Developed Exauge, an AI-powered tool using TypeScript for content-driven websites, enabling automatic quiz generation to boost user engagement and provide audience insights. Implemented seamless integration with Next.js, leveraging TypeScript, Prisma Client, and PostgreSQL for efficient data management and quiz widget deployment.</p>
+                    <p class="text-gray-400 mt-3"><strong>Skills:</strong> Next.js, React, TypeScript, Prisma, PostgreSQL, OpenAI</p>
+                    <a href="https://exauge.com/" class="inline-block mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Exauge Project" target="_blank" rel="noopener noreferrer">View Project</a>
                 </div>
+
                 <div class="card">
-                    <h3 class="text-l font-semibold">Digital Library Search Engine with a Chatbot</h3>
-                    <p class="text-gray-300 mt-2">Developed a web-based digital library search engine with an integrated chatbot for electronic theses and dissertations (ETDs). Utilized React and Node.js to enhance search efficiency and user experience.</p>
-                    <p class="text-gray-400 mt-2"><strong>Skills:</strong> React, JavaScript, TypeScript, Node.js</p>
-                    <a href="https://github.com/maazhasnainkhan/CS518-class-project/tree/main" class="inline-block mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Digital Library Search Engine Project">View Project</a>
+                    <h3 class="text-xl font-semibold">Digital Library Search Engine with a Chatbot</h3>
+                    <p class="text-gray-300 mt-2 leading-relaxed">Developed a web-based digital library search engine with an integrated chatbot for electronic theses and dissertations (ETDs). Utilized React and Node.js to enhance search efficiency and user experience.</p>
+                    <p class="text-gray-400 mt-3"><strong>Skills:</strong> React, JavaScript, TypeScript, Node.js</p>
+                    <a href="https://github.com/maazhasnainkhan/CS518-class-project/tree/main" class="inline-block mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Digital Library Search Engine Project" target="_blank" rel="noopener noreferrer">View Project</a>
                 </div>
+
                 <div class="card">
-                    <h3 class="text-l font-semibold">Global Influenza Dynamics</h3>
-                    <p class="text-gray-300 mt-2">Conducted an in-depth data analysis project leveraging FluNet for global influenza virus surveillance. Developed an interactive dashboard to visualize influenza trends, aiding in global public health preparedness.</p>
-                    <p class="text-gray-400 mt-2"><strong>Skills:</strong> Python, Pandas, Numpy, SciPy, Matplotlib, Seaborn</p>
-                    <a href="https://colab.research.google.com/drive/1Z8MtWRriRkCyf5lToZ0KboVKNpgQAFyE" class="inline-block mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Global Influenza Dynamics Project">View Project</a>
-                    <a href="https://observablehq.com/d/5cb0578d3114667e" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Global Influenza Dynamics Dashboard">View Dashboard</a>
+                    <h3 class="text-xl font-semibold">Global Influenza Dynamics</h3>
+                    <p class="text-gray-300 mt-2 leading-relaxed">Conducted an in-depth data analysis project leveraging FluNet for global influenza virus surveillance. Developed an interactive dashboard to visualize influenza trends, aiding in global public health preparedness.</p>
+                    <p class="text-gray-400 mt-3"><strong>Skills:</strong> Python, Pandas, NumPy, SciPy, Matplotlib, Seaborn</p>
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        <a href="https://colab.research.google.com/drive/1Z8MtWRriRkCyf5lToZ0KboVKNpgQAFyE" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Global Influenza Dynamics Project" target="_blank" rel="noopener noreferrer">View Project</a>
+                        <a href="https://observablehq.com/d/5cb0578d3114667e" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Global Influenza Dynamics Dashboard" target="_blank" rel="noopener noreferrer">View Dashboard</a>
+                    </div>
                 </div>
+
                 <div class="card">
-                    <h3 class="text-l font-semibold">Integrated Modular Operation Room</h3>
-                    <p class="text-gray-300 mt-2">Engineered a smart operation room control system using a web interface integrated with an ESP32 microcontroller. Developed software to generate a web server via NodeMCU ESP32, using C for hardware control and JavaScript/HTML for the interface. Designed and interfaced an Android application using MIT App Inventor for seamless system control.</p>
-                    <p class="text-gray-400 mt-2"><strong>Skills:</strong> C, JavaScript, Arduino, NodeMCU ESP32</p>
-                    <a href="https://github.com/maazhasnainkhan/Integrated-Modular-OR" class="inline-block mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Integrated Modular OR Project">View Project</a>
+                    <h3 class="text-xl font-semibold">Integrated Modular Operation Room</h3>
+                    <p class="text-gray-300 mt-2 leading-relaxed">Engineered a smart operation room control system using a web interface integrated with an ESP32 microcontroller. Developed software to generate a web server via NodeMCU ESP32, using C for hardware control and JavaScript/HTML for the interface. Designed and interfaced an Android application using MIT App Inventor for seamless system control.</p>
+                    <p class="text-gray-400 mt-3"><strong>Skills:</strong> C, JavaScript, Arduino, NodeMCU ESP32</p>
+                    <a href="https://github.com/maazhasnainkhan/Integrated-Modular-OR" class="inline-block mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200" aria-label="View Integrated Modular OR Project" target="_blank" rel="noopener noreferrer">View Project</a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
-            <h2 class="section-header text-xl font-semibold">Contact</h2>
+        <section id="contact" class="scroll-mt-28">
+            <h2 class="section-header">Contact</h2>
             <div class="card">
-                <p class="text-gray-300">Let's connect! Reach out to discuss opportunities or collaborations.</p>
+                <p class="text-gray-300">Let’s connect to discuss teaching, software development, data science, research, or collaboration opportunities.</p>
                 <ul class="list-none text-gray-300 mt-4 space-y-2">
                     <li><strong>Email:</strong> <a href="mailto:maaz.hk98@gmail.com" class="link-hover">maaz.hk98@gmail.com</a></li>
                     <li><strong>Phone:</strong> +1 (757) 553-9171</li>
-                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/maaz-hasnain-khan/" class="link-hover">linkedin.com/in/maaz-hasnain-khan</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/maaz-hasnain-khan/" class="link-hover" target="_blank" rel="noopener noreferrer">linkedin.com/in/maaz-hasnain-khan</a></li>
                     <li><strong>Location:</strong> Norfolk, VA</li>
                 </ul>
             </div>
@@ -181,8 +364,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-6 text-center">
-        <p class="text-gray-400">© 2025 Maaz Hasnain Khan. All rights reserved.</p>
+    <footer class="bg-gray-800 py-6 text-center border-t border-gray-700 mt-16">
+        <p class="text-gray-400">© 2026 Maaz Hasnain Khan. All rights reserved.</p>
     </footer>
 </body>
 </html>
