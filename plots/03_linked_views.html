@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "hconcat": [{"data": {"name": "data-11e35bbdb586b4f989b42111be07362c"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"param": "param_3", "value": "#1f77b4"}, "value": "#d3d3d3"}, "x": {"field": "corridor", "title": "Corridor", "type": "nominal"}, "y": {"field": "avg_speed", "title": "Average speed", "type": "quantitative"}}, "height": 300, "name": "view_1", "title": "Select a corridor", "width": 250}, {"data": {"name": "data-a55a6f4ccb33369c25e5bac8680b5f3e"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "corridor", "type": "nominal"}, "x": {"field": "month", "title": "Month", "type": "temporal"}, "y": {"field": "near_miss_reports", "title": "Near-miss reports", "type": "quantitative"}}, "height": 300, "title": "Monthly trend for selected corridor", "transform": [{"filter": {"param": "param_3"}}], "width": 350}], "params": [{"name": "param_3", "select": {"type": "point", "fields": ["corridor"]}, "views": ["view_1"]}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-11e35bbdb586b4f989b42111be07362c": [{"corridor": "Maple Ave", "district": "South", "avg_speed": 27.0, "near_miss_reports": 12.833333333333334, "rider_comfort": 6.3}, {"corridor": "Market St", "district": "West", "avg_speed": 35.0, "near_miss_reports": 9.5, "rider_comfort": 4.8}, {"corridor": "Oak St", "district": "North", "avg_speed": 31.0, "near_miss_reports": 17.0, "rider_comfort": 5.400000000000001}, {"corridor": "Riverfront Dr", "district": "East", "avg_speed": 24.0, "near_miss_reports": 11.5, "rider_comfort": 7.2}], "data-a55a6f4ccb33369c25e5bac8680b5f3e": [{"corridor": "Oak St", "district": "North", "month": "2026-01-01T00:00:00", "value": 14, "avg_speed": 31, "near_miss_reports": 14, "rider_comfort": 5.4}, {"corridor": "Oak St", "district": "North", "month": "2026-02-01T00:00:00", "value": 16, "avg_speed": 31, "near_miss_reports": 16, "rider_comfort": 5.4}, {"corridor": "Oak St", "district": "North", "month": "2026-03-01T00:00:00", "value": 15, "avg_speed": 31, "near_miss_reports": 15, "rider_comfort": 5.4}, {"corridor": "Oak St", "district": "North", "month": "2026-04-01T00:00:00", "value": 18, "avg_speed": 31, "near_miss_reports": 18, "rider_comfort": 5.4}, {"corridor": "Oak St", "district": "North", "month": "2026-05-01T00:00:00", "value": 20, "avg_speed": 31, "near_miss_reports": 20, "rider_comfort": 5.4}, {"corridor": "Oak St", "district": "North", "month": "2026-06-01T00:00:00", "value": 19, "avg_speed": 31, "near_miss_reports": 19, "rider_comfort": 5.4}, {"corridor": "Maple Ave", "district": "South", "month": "2026-01-01T00:00:00", "value": 11, "avg_speed": 27, "near_miss_reports": 11, "rider_comfort": 6.3}, {"corridor": "Maple Ave", "district": "South", "month": "2026-02-01T00:00:00", "value": 12, "avg_speed": 27, "near_miss_reports": 12, "rider_comfort": 6.3}, {"corridor": "Maple Ave", "district": "South", "month": "2026-03-01T00:00:00", "value": 13, "avg_speed": 27, "near_miss_reports": 13, "rider_comfort": 6.3}, {"corridor": "Maple Ave", "district": "South", "month": "2026-04-01T00:00:00", "value": 12, "avg_speed": 27, "near_miss_reports": 12, "rider_comfort": 6.3}, {"corridor": "Maple Ave", "district": "South", "month": "2026-05-01T00:00:00", "value": 14, "avg_speed": 27, "near_miss_reports": 14, "rider_comfort": 6.3}, {"corridor": "Maple Ave", "district": "South", "month": "2026-06-01T00:00:00", "value": 15, "avg_speed": 27, "near_miss_reports": 15, "rider_comfort": 6.3}, {"corridor": "Riverfront Dr", "district": "East", "month": "2026-01-01T00:00:00", "value": 9, "avg_speed": 24, "near_miss_reports": 9, "rider_comfort": 7.2}, {"corridor": "Riverfront Dr", "district": "East", "month": "2026-02-01T00:00:00", "value": 10, "avg_speed": 24, "near_miss_reports": 10, "rider_comfort": 7.2}, {"corridor": "Riverfront Dr", "district": "East", "month": "2026-03-01T00:00:00", "value": 11, "avg_speed": 24, "near_miss_reports": 11, "rider_comfort": 7.2}, {"corridor": "Riverfront Dr", "district": "East", "month": "2026-04-01T00:00:00", "value": 13, "avg_speed": 24, "near_miss_reports": 13, "rider_comfort": 7.2}, {"corridor": "Riverfront Dr", "district": "East", "month": "2026-05-01T00:00:00", "value": 12, "avg_speed": 24, "near_miss_reports": 12, "rider_comfort": 7.2}, {"corridor": "Riverfront Dr", "district": "East", "month": "2026-06-01T00:00:00", "value": 14, "avg_speed": 24, "near_miss_reports": 14, "rider_comfort": 7.2}, {"corridor": "Market St", "district": "West", "month": "2026-01-01T00:00:00", "value": 7, "avg_speed": 35, "near_miss_reports": 7, "rider_comfort": 4.8}, {"corridor": "Market St", "district": "West", "month": "2026-02-01T00:00:00", "value": 8, "avg_speed": 35, "near_miss_reports": 8, "rider_comfort": 4.8}, {"corridor": "Market St", "district": "West", "month": "2026-03-01T00:00:00", "value": 9, "avg_speed": 35, "near_miss_reports": 9, "rider_comfort": 4.8}, {"corridor": "Market St", "district": "West", "month": "2026-04-01T00:00:00", "value": 10, "avg_speed": 35, "near_miss_reports": 10, "rider_comfort": 4.8}, {"corridor": "Market St", "district": "West", "month": "2026-05-01T00:00:00", "value": 11, "avg_speed": 35, "near_miss_reports": 11, "rider_comfort": 4.8}, {"corridor": "Market St", "district": "West", "month": "2026-06-01T00:00:00", "value": 12, "avg_speed": 35, "near_miss_reports": 12, "rider_comfort": 4.8}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
